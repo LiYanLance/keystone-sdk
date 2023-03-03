@@ -5,9 +5,6 @@ use crate::traits::{From, RegistryItem, To};
 use crate::types::Bytes;
 use serde_cbor::{from_slice, to_vec, Value};
 use std::collections::BTreeMap;
-use wasm_bindgen::prelude::*;
-use wasm_bindgen::convert::IntoWasmAbi;
-use wasm_bindgen::describe::WasmDescribe;
 
 const REQUEST_ID: i128 = 1;
 const SIGN_DATA: i128 = 2;
@@ -51,7 +48,6 @@ pub struct SolSignRequest {
     sign_type: SignType,
 }
 
-#[wasm_bindgen]
 impl SolSignRequest {
     pub fn default() -> Self {
         Default::default()

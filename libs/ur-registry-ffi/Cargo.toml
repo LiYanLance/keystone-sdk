@@ -1,5 +1,5 @@
 [package]
-name = "ur-registry"
+name = "ur-registry-ffi"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,11 @@ edition = "2021"
 
 [dependencies]
 ur = { git = "https://github.com/KeystoneHQ/ur-rs", branch = "master" }
+ur-registry = { path = "../ur-registry" }
+wasm-bindgen = "0.2"
 serde_cbor = "0.11.2"
 hex = "0.4.3"
-bs58 = {version = "0.4.0", features=['check']}
+
+[lib]
+name = "ur_registry_ffi"
+crate-type = ["cdylib", "staticlib"]

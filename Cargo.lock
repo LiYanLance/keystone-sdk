@@ -234,6 +234,16 @@ dependencies = [
  "hex",
  "serde_cbor",
  "ur",
+]
+
+[[package]]
+name = "ur-registry-ffi"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "serde_cbor",
+ "ur",
+ "ur-registry",
  "wasm-bindgen",
 ]
 
