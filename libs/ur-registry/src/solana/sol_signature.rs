@@ -12,6 +12,21 @@ pub struct SolSignature {
     request_id: Option<Bytes>,
     signature: Bytes,
 }
+//
+// pub fn parse_signature(ur: &UR) -> String {
+//     let cbor_str=  match unsafe { CStr::from_ptr(cbor_hex) }.to_str() {
+//         Ok(v) => v.to_string(),
+//         Err(_) => String::from("")
+//     };
+//
+//
+//
+//     let cbor = hex::decode(cbor_str).unwrap();
+//     let res = serde_cbor::from_slice(cbor.as_slice()).unwrap();
+//     let sol_signature = SolSignature::from_cbor(res).unwrap();
+//     let sig = sol_signature.get_signature();
+//     rust_string_to_c(hex::encode(sig))
+// }
 
 impl SolSignature {
     pub fn default() -> Self {
