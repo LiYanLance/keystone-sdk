@@ -14,7 +14,12 @@ hex = "0.4.3"
 ffi-support = "0.4"
 anyhow = "1.0"
 libc = "0.2"
+jni = { version = "0.16.0", optional = true, default-feature = false }
 
 [lib]
 name = "ur_registry_ffi"
 crate-type = ["cdylib", "staticlib"]
+
+
+[features]
+default = ["jni"]
