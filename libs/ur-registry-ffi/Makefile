@@ -6,7 +6,7 @@ LIB = $(NAME).a
 ARCHS_ANDROID = aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
 ARCHS_IOS = aarch64-apple-ios
 
-ANDROID_DEST = ~/AndroidStudioProjects/MyApplication/app/src/main/jniLibs
+# ANDROID_DEST = ~/Documents/Projects/KeystoneSDKAndroid/library/src/main/jniLibs
 IOS_DEST = ../ios
 
 # all: install-android ios
