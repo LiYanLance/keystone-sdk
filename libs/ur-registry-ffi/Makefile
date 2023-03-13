@@ -22,16 +22,16 @@ clean:
 
 # Android
 aarch64-linux-android:
-	cargo ndk --platform 21 -t arm64-v8a build --release
+	cargo ndk -t arm64-v8a build --release
 
 armv7-linux-androideabi:
-	cargo ndk --platform 21 -t armeabi-v7a build --release
+	cargo ndk -t armeabi-v7a build --release
 
 i686-linux-android:
-	cargo ndk --platform 21 -t x86 build --release
+	cargo ndk -t x86 build --release
 
 x86_64-linux-android:
-	cargo ndk --platform 21 -t x86_64 build --release
+	cargo ndk -t x86_64 build --release
 
 install-android: android
 	mkdir -p $(ANDROID_DEST)
