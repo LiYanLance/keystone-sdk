@@ -19,11 +19,11 @@ export! {
         let request_id = Uuid::parse_str(&uuid_hex).unwrap().to_string();
         let signature = hex::encode(sol_signature.get_signature());
 
-        let john = json!({
+        let sol_signature = json!({
             "request_id": request_id,
             "signature": signature,
         });
-        john.to_string()
+        sol_signature.to_string()
     }
 }
 

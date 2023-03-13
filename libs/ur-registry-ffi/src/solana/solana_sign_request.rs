@@ -37,7 +37,7 @@ export! {
             sign_type
         );
         let cbor = hex::encode(result.to_bytes());
-        let ur_type = "sol-signature"；
+        let ur_type = "sol-sign-request";
         let ur = json!({
             "type": ur_type,
             "cbor": cbor,
